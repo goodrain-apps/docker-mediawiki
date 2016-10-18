@@ -45,8 +45,8 @@ VOLUME /data
 
 WORKDIR /app
 
-RUN curl -fSL https://releases.wikimedia.org/mediawiki/1.25/mediawiki-1.25.2.tar.gz -o mediawiki.tar.gz && \
-    tar -zxf mediawiki.tar.gz && mv mediawiki-1.25.2 mediawiki && rm mediawiki.tar.gz
+RUN curl -fSL https://releases.wikimedia.org/mediawiki/1.24/mediawiki-1.24.2.tar.gz -o mediawiki.tar.gz && \
+    tar -zxf mediawiki.tar.gz && mv mediawiki-1.24.2 mediawiki && rm mediawiki.tar.gz
 
 COPY config/userdefine.png /app/mediawiki/resources/assets/userdefine.png
 COPY config/LocalSettings.php /app/mediawiki
