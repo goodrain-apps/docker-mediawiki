@@ -49,7 +49,7 @@ function curPageURL()
     }
     return $pageURL;
 }
-$wgServer = curPageURL();
+$wgServer = "SITE_URL";
 
 ## The URL path to static resources (images, scripts, etc.)
 $wgResourceBasePath = $wgScriptPath;
