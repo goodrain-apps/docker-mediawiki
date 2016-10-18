@@ -8,7 +8,7 @@ export WIKI_NAME_SPACE=${WIKI_NAME_SPACE:-'MyWiki'}
 sed -i \
     -e "s|WIKI_NAME|${WIKI_NAME}|" \
     -e "s|WIKI_NAME_SPACE|${WIKI_NAME_SPACE}|" \
-    /app/media/LocalSettings.php
+    /app/mediawiki/LocalSettings.php
 
 if [ ! -d "/data/config" ];then
 	mv /app/config/ /data/config

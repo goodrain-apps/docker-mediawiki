@@ -46,14 +46,11 @@ VOLUME /data
 WORKDIR /app
 
 RUN curl -fSL https://releases.wikimedia.org/mediawiki/1.27/mediawiki-1.27.1.tar.gz -o mediawiki.tar.gz && \
-    tar -zxf mediawiki.tar.gz && mv mediawiki-1.27.1 mediawiki
+    tar -zxf mediawiki.tar.gz && mv mediawiki-1.27.1 mediawiki && rm mediawiki.tar.gz
 
 COPY config/userdefine.png /app/mediawiki/resources/assets/userdefine.png
 COPY config/LocalSettings.php /app/mediawiki
 ADD config/sql-config/ /app/config/
 
 EXPOSE 5000
-ENTRYPOINT ["/app/run.sh"]
-
-
-
+ENTRYPOINT ["/app/docker-entrypoint.sh"]
