@@ -18,8 +18,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 ## Uncomment this to disable output compression
 # $wgDisableOutputCompression = true;
 
-$wgSitename = "mywiki";
-$wgMetaNamespace = "Mywiki";
+$wgSitename = "WIKI_NAME";
+$wgMetaNamespace = "WIKI_NAME_SPACE";
 
 ## The URL base path to the directory containing the wiki;
 ## defaults for all runtime URL paths are based off of this.
@@ -30,7 +30,7 @@ $wgScriptPath = "";
 $wgScriptExtension = ".php";
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "http://localhost:5000";
+$wgServer = "SITE_URL";
 
 ## The relative URL path to the skins directory
 $wgStylePath = "$wgScriptPath/skins";
