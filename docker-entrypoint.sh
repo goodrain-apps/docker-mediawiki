@@ -20,10 +20,13 @@ sed -i \
 if [ ! -d "/data/config" ];then
 	mv /app/config/ /data/config
 	chmod -R 777 /data/config
+	mv /app/mediawiki/images /data/images
+	chmod -R 777 /data/images
 fi
 
 rm -r /app/data
-
 ln -s /data/config /app/data
+rm -r /app/mediawiki/images
+ln -s /data/images /app/mediawiki/images
 
 apache2-foreground
