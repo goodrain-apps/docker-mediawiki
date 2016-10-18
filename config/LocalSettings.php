@@ -89,7 +89,7 @@ $wgObjectCaches[CACHE_DB] = [
         'flags' => 0
     ]
 ];
-
+$wgSessionCacheType = CACHE_DB;
 ## Shared memory settings
 $wgMainCacheType = CACHE_ANYTHING;
 $wgMemCachedServers = [];
