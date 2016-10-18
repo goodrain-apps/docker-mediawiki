@@ -91,7 +91,7 @@ $wgObjectCaches[CACHE_DB] = [
 ];
 
 ## Shared memory settings
-$wgMainCacheType = CACHE_NONE;
+$wgMainCacheType = CACHE_ANYTHING;
 $wgMemCachedServers = [];
 
 ## To enable image uploads, make sure the 'images' directory
@@ -145,10 +145,10 @@ $wgDefaultSkin = "vector";
 
 # Enabled skins.
 # The following skins were automatically enabled:
-//wfLoadSkin( 'CologneBlue' );
-//wfLoadSkin( 'Modern' );
-//wfLoadSkin( 'MonoBook' );
-//wfLoadSkin( 'Vector' );
+wfLoadSkin( 'CologneBlue' );
+wfLoadSkin( 'Modern' );
+wfLoadSkin( 'MonoBook' );
+wfLoadSkin( 'Vector' );
 
 
 # End of automatically generated settings.
