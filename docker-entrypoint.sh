@@ -19,6 +19,7 @@ sed -i \
 
 if [ ! -d "/data/config" ];then
 	mv /app/config/ /data/config
+	chmod -R 777 /data/config
 fi
 
 rm -r /app/data
