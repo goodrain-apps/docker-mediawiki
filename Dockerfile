@@ -40,8 +40,8 @@ COPY run.sh /app
 COPY docker-entrypoint.sh /app
 RUN chmod +x /app/run.sh
 RUN chmod +x /app/docker-entrypoint.sh
-
-VOLUME /data
+ENV VOLUMEPATH=/data
+VOLUME ${VOLUMEPATH}
 
 WORKDIR /app
 
