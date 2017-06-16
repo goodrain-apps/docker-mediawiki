@@ -41,8 +41,8 @@ COPY docker-entrypoint.sh /app
 RUN chmod +x /app/run.sh
 RUN chmod +x /app/docker-entrypoint.sh
 ENV DATA_DIR=/data
-VOLUME ${DATA_DIR}
-# VOLUME /data
+# VOLUME ${DATA_DIR}
+VOLUME ["/data1","/data2"]
 WORKDIR /app
 
 RUN curl -fSL https://releases.wikimedia.org/mediawiki/1.24/mediawiki-1.24.2.tar.gz -o mediawiki.tar.gz && \
